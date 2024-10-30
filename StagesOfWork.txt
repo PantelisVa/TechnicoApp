@@ -1,0 +1,17 @@
+27-30/10/24
+
+-Added displayUsers in Owner_Services to display the requiring fields for the project.
+-Modified the entities a bit to correspond with the relationships between them.
+-Test set the connection between the Virtual Studio and the Database.
+-Created methods for update,delete,view and create Owner.
+
+
+We need to understand and declare the relationships between the entities, as it makes a big difference in the
+coding.
+
+In our project. my implementation is described as follows:
+-An owner can have many properties.
+-A single property can be in need of many different repairs.
+-A type of repair can be implemented on multiple properties.
+
+
