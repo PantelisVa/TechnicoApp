@@ -25,7 +25,10 @@ public class Owner
 
     public string Password { get; set;} = string.Empty;
 
-    virtual public List<TypeOfUser> TypeOfUser { get; set; } = new List<TypeOfUser>(); 
+    virtual public List<TypeOfUser> TypeOfUser { get; set; } = new List<TypeOfUser>();
+
+    virtual public List<Repair> Repairs { get; set; } = new List<Repair>();
+    virtual public List<Property> Properties { get; set; } = new List<Property>();
 
 }
 
@@ -39,6 +42,8 @@ public class Property
     virtual public Owner? Owner { get; set; }
 
     virtual public List<TypeOfProperty> TypeOfProperty { get; set; } = new List<TypeOfProperty>();
+
+    virtual public List<Repair> Repairs { get; set; } = new List<Repair>();
 
 }
 
@@ -57,7 +62,6 @@ public class Repair
     virtual public Owner? Owner { get; set; }
 
     virtual public List<TypeOfRepair> TypeOfRepair { get; set; } = new List<TypeOfRepair>();
-
 }
 
 public enum Status

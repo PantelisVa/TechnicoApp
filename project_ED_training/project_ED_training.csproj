@@ -6,8 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Services\Customer_Services\" />
     <Folder Include="Services\Repair_Services\" />
-    <Folder Include="Services\Owner_Services\" />
   </ItemGroup>
 </Project>
