@@ -15,3 +15,12 @@ In our project. my implementation is described as follows:
 -A type of repair can be implemented on multiple properties.
 
 
+Property services:
+-Done CRUD operations.
+-For the update, you can change year of construction, address.
+-For the view property, I used the exception method to throw an error if the program doesn't find it in the database.
+
+
+
+
+

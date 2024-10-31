@@ -11,7 +11,7 @@ namespace project_ED_training.Services.Owner_Services;
 
 public class Owner_services
 {
-    private TechnicoDbContext db;
+    private readonly TechnicoDbContext db;
 
     public Owner_services(TechnicoDbContext db)
     {
