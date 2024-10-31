@@ -9,7 +9,7 @@ using project_ED_training.Models;
 
 namespace project_ED_training.Services.Owner_Services;
 
-public class Owner_services
+public class Owner_services : IOwner_services
 {
     private readonly TechnicoDbContext db;
 
@@ -85,7 +85,7 @@ public class Owner_services
                 .Include(o => o.Properties)
                 .Include(o => o.Repairs)
                 .SingleOrDefault(o => o.VATId == VATId);
-            
+
             //exception
             if (owner == null)
             {

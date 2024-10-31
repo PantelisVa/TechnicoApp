@@ -9,7 +9,7 @@ using project_ED_training.Repositories;
 
 namespace project_ED_training.Services.Property_Services;
 
-public class Property_Services
+public class Property_Services : IProperty_Services
 {
     private readonly TechnicoDbContext db;
 
@@ -45,7 +45,7 @@ public class Property_Services
         Property? propertydb = db.Properties.Find(Property.propertyID);
         if (propertydb != null)
         {
-            
+
             propertydb.Address = Address;
             propertydb.YearsOfConstruction = YearsOfConstruction;
             db.Savechanges();
@@ -61,7 +61,7 @@ public class Property_Services
     public ViewProperty(int PropertyID)
     {
         Value = db.Properties.Find(PropertyID);
-        if ( Value == null)
+        if (Value == null)
         {
             throw new Exception("Property not found.");
         }

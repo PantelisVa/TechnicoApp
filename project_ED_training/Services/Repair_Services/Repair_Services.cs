@@ -8,7 +8,7 @@ using project_ED_training.Repositories;
 
 namespace project_ED_training.Services.Repair_Services;
 
-public class Repair_Services
+public class Repair_Services : IRepair_Services
 {
     private readonly TechnicoDbContext db;
 
@@ -19,7 +19,7 @@ public class Repair_Services
 
     public SearchRepair(int repairID)
     {
-        var repair = _context.Repairs.FirstOrDefault(r => r.ID == repairID &&r.IsActive);
+        var repair = _context.Repairs.FirstOrDefault(r => r.ID == repairID && r.IsActive);
 
         if (repair == null)
         {
@@ -42,16 +42,18 @@ public class Repair_Services
         repair.Cost = Cost;
 
         _context.Savechanges();
-        
+
     }
 
     public bool DeleteRepair(int repairID)
     {
         var repair = _context.Repairs.FirstOrDefault(r => r.repairID == repairID);
 
-        if (repair == null) {
+        if (repair == null)
+        {
             throw new Exception("Repair not found");
-            return false; }
+            return false;
+        }
         else
         {
             _context.Repairs.Remove(repair);
